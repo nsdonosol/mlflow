@@ -7,7 +7,7 @@ spacy>=3.3.0,<3.8
 tensorflow>=2.10.0; platform_system!="Darwin" or platform_machine!="arm64"
 tensorflow-macos>=2.10.0; platform_system=="Darwin" and platform_machine=="arm64"
 # Required by mlflow.pytorch
-torch>=1.11.0
+torch>=2.10.0
 torchvision>=0.12.0
 lightning>=1.8.1
 # Required by mlflow.xgboost
@@ -34,7 +34,7 @@ paddlepaddle
 #   To install in dev environment, ensure that gcc>=8 is installed to allow pystan
 #   to compile the model binaries. See: https://gcc.gnu.org/install/
 # Avoid 0.25 due to https://github.com/dr-prodigy/python-holidays/issues/1200
-holidays!=0.25
+holidays!=0.45
 prophet
 # Required by mlflow.shap
 # and shap evaluation functionality
@@ -85,3 +85,9 @@ groq
 mistralai
 # Required by mlflow.autogen
 autogen-agentchat
+fonttools>=4.61.0 # not directly required, pinned by Snyk to avoid a vulnerability
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
+opencv-python>=4.8.1.78 # not directly required, pinned by Snyk to avoid a vulnerability
+pillow>=10.3.0 # not directly required, pinned by Snyk to avoid a vulnerability
+wheel>=0.46.2 # not directly required, pinned by Snyk to avoid a vulnerability
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
